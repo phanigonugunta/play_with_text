@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import MyButton from "./components/MyButton";
+import TextForm from "./components/TextForm";
 
-function App() {
+import Navigation from "./components/Navigation";
+
+
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
+
+function MyApp() {
+  
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navigation/>
+      <h2 className="p-3 mb-2 bg-secondary text-white mx-auto">Play With Text</h2>
+      
+      <div className="container">
+        <TextForm/>
+      </div>
+      
+      {/* <MyButton name="phani" age = {12} /> */}
+      
     </div>
   );
 }
 
-export default App;
+export default MyApp;
